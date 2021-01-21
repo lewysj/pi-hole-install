@@ -62,7 +62,7 @@ webroot="/var/www/html"
 # We store several other directories and
 webInterfaceGitUrl="https://github.com/lewysj/AdminLTE.git"
 webInterfaceDir="${webroot}/admin"
-piholeGitUrl="https://github.com/pi-hole/pi-hole.git"
+piholeGitUrl="https://github.com/lewysj/pi-hole.git"
 PI_HOLE_LOCAL_REPO="/etc/.pihole"
 # These are the names of pi-holes files, stored in an array
 PI_HOLE_FILES=(chronometer list piholeDebug piholeLogFlush setupLCD update version gravity uninstall webpage)
@@ -2628,7 +2628,7 @@ main() {
             # when run via curl piping
             if [[ "$0" == "bash" ]]; then
                 # Download the install script and run it with admin rights
-                exec curl -sSL https://raw.githubusercontent.com/pi-hole/pi-hole/master/automated%20install/basic-install.sh | sudo bash "$@"
+                exec curl -sSL https://raw.githubusercontent.com/lewysj/pi-hole/master/automated%20install/basic-install.sh | sudo bash "$@"
             else
                 # when run via calling local bash script
                 exec sudo bash "$0" "$@"
